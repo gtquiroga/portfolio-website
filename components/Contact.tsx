@@ -25,10 +25,10 @@ export default function Contact({}: Props) {
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
         setIsSending(true)
         emailjs.send(
-            process.env.NEXT_PUBLIC_MAILJS_SERVICE_ID,
-            process.env.NEXT_PUBLIC_MAILJS_TEMPLATE_ID,
+            process.env.NEXT_PUBLIC_MAILJS_SERVICE_ID || '',
+            process.env.NEXT_PUBLIC_MAILJS_TEMPLATE_ID || '',
             formData,
-            process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY
+            process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY || ''
             )
         .then((result: any) => {
             console.log(result.text);
