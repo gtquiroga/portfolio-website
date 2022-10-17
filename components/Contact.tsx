@@ -24,7 +24,12 @@ export default function Contact({}: Props) {
     const { register, handleSubmit } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
         setIsSending(true)
-        emailjs.send('service_di69', 'template_s0rv8fl', formData, 'fQfI7-1dl4KrLqnwl')
+        emailjs.send(
+            process.env.NEXT_PUBLIC_MAILJS_SERVICE_ID,
+            process.env.NEXT_PUBLIC_MAILJS_TEMPLATE_ID,
+            formData,
+            process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY
+            )
         .then((result: any) => {
             console.log(result.text);
             setIsSending(false)
