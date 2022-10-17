@@ -10,7 +10,7 @@ type Props = {
 
 export default function Hero({ pageInfo }: Props) {
   return (
-    <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+    <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden pt-36 min-h-fit'>
         <h1 className='text-6xl font-semibold mb-32 tracking-wider'><span className='text-red-500 underline decoration-red-500'>Hi</span>, I'm Gonzalo</h1>
         <img
             className='relative rounded-full h-36 w-36'
@@ -31,8 +31,8 @@ export default function Hero({ pageInfo }: Props) {
                 <Link href="#skills">
                     <button className='heroButton'>Skills</button>
                 </Link>
-                <Link href="#proyects">
-                    <button className='heroButton'>Proyects</button>
+                <Link href="#projects">
+                    <button className='heroButton'>Projects</button>
                 </Link>
             </div>
         </div>

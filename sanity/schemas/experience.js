@@ -48,6 +48,11 @@ export default {
         type: "array",
         of: [{ type: "string" }],
       },
+      {
+        name: "index",
+        title: "Index",
+        type: "number",
+      },
   
     ],
   

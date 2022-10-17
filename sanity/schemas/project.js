@@ -33,6 +33,11 @@ export default {
         title: "LinkToBuild",
         type: "url",
       },
+      {
+        name: "index",
+        title: "Index",
+        type: "number",
+      },
   
     ],
   

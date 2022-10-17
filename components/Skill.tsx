@@ -12,7 +12,7 @@ export default function Skill({ skill }: Props) {
   return (
     <div className='group relative flex cursor-pointer'>
         <img 
-            className='rounded-full border border-gray-500 object-cover h-24 w-24 md:w-28 md:h-28
+            className='rounded-full aspect-square border border-gray-500 object-contain h-24 w-24 md:w-28 md:h-28
             xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out'
             src={urlFor(skill.image).url()}
         />
