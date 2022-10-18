@@ -19,7 +19,7 @@ export default function WorkExperience({ experiences }: Props) {
         max-w-full px-2 sm:px-10 justify-evenly mx-auto items-center min-h-fit'
     >
         <h3 className='absolute uppercase top-24 tracking-[20px] text-gray-500 text-xl sm:text-2xl'>Experience</h3>
-        <div className='mt-36 w-full flex space-x-5 overflow-x-scroll snap-x snap-mandatory py-2
+        <div className='w-full flex space-x-5 overflow-x-scroll snap-x snap-mandatory py-2
             scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin max-w-5xl'
         >
           {experiences?.map((experience) => (

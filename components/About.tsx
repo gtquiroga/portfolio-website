@@ -33,7 +33,7 @@ export default function About({ pageInfo }: Props) {
                 once: true
             }}
             src={urlFor(pageInfo?.profilePic).url()}
-            className='-mb-20 md:mb-0 w-0 h-0 flex-shrink-0 sm:w-56 sm:h-56 rounded-full object-cover
+            className='-mb-44 sm:-mb-20 md:mb-0 w-32 h-32 flex-shrink-0 sm:w-56 sm:h-56 rounded-full object-cover
             md:rounded-md md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]'
         />
         <div className='space-y-10 px-0 md:px-10'>

@@ -29,7 +29,7 @@ export default function Projects({ projects }: Props) {
                     <div 
                         key={project?._id}
                         className='w-screen flex-shrink-0 snap-center flex flex-col space-y-2 sm:space-y-5 items-center
-                        justify-center p-4 sm:p-20 md:p-44 h-screen'
+                        justify-center p-6 sm:p-20 md:p-44 h-screen'
                     >
                         <motion.img 
                             initial={{
@@ -41,10 +41,10 @@ export default function Projects({ projects }: Props) {
                             viewport={{ once: true}}
                             src={urlFor(project?.image).url()}
                             alt=""
-                            className='max-h-16 sm:max-h-40 md:max-h-56'
+                            className='max-h-18 sm:max-h-40 md:max-h-56'
                         />
-                        <div className='space-y-4 sm:space-y-6 px-0 md:px-10 max-w-6xl'>
-                            <h4 className='text-lg sm:text-4xl font-semibold text-center'>{project?.title}</h4>
+                        <div className='space-y-4 sm:space-y-6 px-2 md:px-10 max-w-6xl'>
+                            <h4 className='text-2xl sm:text-4xl font-semibold text-center'>{project?.title}</h4>
                             <div className='flex items-center space-x-2 justify-center'>
                                 {project?.technologies?.map(technology => (
                                     <img 
@@ -58,16 +58,16 @@ export default function Projects({ projects }: Props) {
                             {project.linkToBuild && (
                                 <div className='flex flex-row justify-center items-center'>
                                     <a 
-                                        className='px-4 py-1 sm:px-8 sm:py-2 text-sm sm:text-base flex items-center bg-[#F7AB0A] hover:bg-[#F7AB0A]/80 rounded-lg text-black'
+                                        className='px-8 py-1 sm:px-8 sm:py-2 text-base flex items-center bg-[#F7AB0A] hover:bg-[#F7AB0A]/80 rounded-lg text-black'
                                         href={project.linkToBuild}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Visit website
+                                        Visit project
                                     </a>
                                 </div>
                             )}
-                            <p className='text-sm sm:text-lg text-center md:text-left'>{project?.summary}</p>
+                            <p className='text-base sm:text-lg text-center md:text-left'>{project?.summary}</p>
                         </div>
                     </div>
                 ))}

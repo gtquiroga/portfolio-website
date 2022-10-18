@@ -31,7 +31,6 @@ export default function Contact({}: Props) {
             process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY || ''
             )
         .then((result: any) => {
-            console.log(result.text);
             setIsSending(false)
             setSendCorrectly(true)
             setTimeout(() => setSendCorrectly(false), 2000)
@@ -50,7 +49,7 @@ export default function Contact({}: Props) {
             whileInView={{opacity: 1}}
             transition={{duration: 1.5}}
             className='h-screen relative flex flex-col text-center md:text-left md:flex-row
-                max-x-5xl px-10 justify-evenly max-auto items-center pt-36 min-h-fit'
+                max-x-5xl px-4 sm:px-10 justify-evenly mx-auto items-center pt-24 min-h-fit'
         >
             <h3 className='absolute uppercase top-24 tracking-[20px] text-gray-500 text-xl sm:text-2xl'>Contact</h3>
             <div className='flex flex-col space-y-10'>
@@ -71,14 +70,14 @@ export default function Contact({}: Props) {
 
                 <form 
                     onSubmit={handleSubmit(onSubmit)}
-                    className='flex flex-col space-y-2 w-72 sm:w-fit mx-auto'
+                    className='flex flex-col space-y-2 w-full sm:w-fit mx-1 sm:mx-auto'
                 >
                     <div className='flex space-x-2'>
                         <input {...register('name')} placeholder='Name' className='contactInput' type="text" />
                         <input {...register('email')} placeholder='Email' className='contactInput' type="email" />
                     </div>
                     <input {...register('subject')} placeholder='Subject' className='contactInput' type="text" />
-                    <textarea {...register('message')} placeholder='Message' className='contactInput h-28 sm:h-36'/>
+                    <textarea {...register('message')} placeholder='Message' className='contactInput h-32 sm:h-36'/>
                     <button
                         type='submit' 
                         className='flex flex-row justify-center bg-[#F7AB0A] py-2 px-4 text-base sm:py-5 sm:px-10 rounded-md text-black
@@ -93,10 +92,10 @@ export default function Contact({}: Props) {
                                 ariaLabel="loading"
                             />
                         ) : (sendError ? (
-                                <XCircleIcon className='text-red-700 h-10 w-10'/>
+                                <XCircleIcon className='text-red-700 h-8 w-8 sm:h-10 sm:w-10'/>
                             ) : (sendCorrectly ? (
-                                <CheckCircleIcon className='text-green-700 h-10 w-10'/>
-                            ) : ('Submit'))
+                                <CheckCircleIcon className='text-green-700 h-8 w-8 sm:h-10 sm:w-10'/>
+                            ) : ('Send'))
                         )}
                     </button>
                 </form>
