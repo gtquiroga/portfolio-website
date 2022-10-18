@@ -52,37 +52,37 @@ export default function Contact({}: Props) {
             className='h-screen relative flex flex-col text-center md:text-left md:flex-row
                 max-x-5xl px-10 justify-evenly max-auto items-center pt-36 min-h-fit'
         >
-            <h3 className='absolute uppercase top-24 tracking-[20px] text-gray-500 text-2xl'>Contact</h3>
+            <h3 className='absolute uppercase top-24 tracking-[20px] text-gray-500 text-xl sm:text-2xl'>Contact</h3>
             <div className='flex flex-col space-y-10'>
-                <div className='space-y-10'>
+                <div className='space-y-2 sm:space-y-10'>
                     <div className='flex items-center space-x-5 justify-center'>
-                        <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                        <p className='text-2xl'>+447470184507</p>
+                        <PhoneIcon className='text-[#F7AB0A] h-4 w-4 sm:h-7 sm:w-7 animate-pulse'/>
+                        <p className='text-base sm:text-2xl'>+447470184507</p>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>
-                        <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                        <p className='text-2xl'>gquirogac1@gmail.com</p>
+                        <EnvelopeIcon className='text-[#F7AB0A] h-4 w-4 sm:h-7 sm:w-7 animate-pulse'/>
+                        <p className='text-base sm:text-2xl'>gquirogac1@gmail.com</p>
                     </div>
                     <div className='flex items-center space-x-5 justify-center'>
-                        <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                        <p className='text-2xl'>28 Hans Place, London, UK</p>
+                        <MapPinIcon className='text-[#F7AB0A] h-4 w-4 sm:h-7 sm:w-7 animate-pulse'/>
+                        <p className='text-base sm:text-2xl'>28 Hans Place, London, UK</p>
                     </div>
                 </div>
 
                 <form 
                     onSubmit={handleSubmit(onSubmit)}
-                    className='flex flex-col space-y-2 w-fit mx-auto'
+                    className='flex flex-col space-y-2 w-72 sm:w-fit mx-auto'
                 >
                     <div className='flex space-x-2'>
                         <input {...register('name')} placeholder='Name' className='contactInput' type="text" />
                         <input {...register('email')} placeholder='Email' className='contactInput' type="email" />
                     </div>
                     <input {...register('subject')} placeholder='Subject' className='contactInput' type="text" />
-                    <textarea {...register('message')} placeholder='Message' className='contactInput'/>
+                    <textarea {...register('message')} placeholder='Message' className='contactInput h-28 sm:h-36'/>
                     <button
                         type='submit' 
-                        className='flex flex-row justify-center bg-[#F7AB0A] py-5 px-10 rounded-md text-black
-                            font-bold text-lg'
+                        className='flex flex-row justify-center bg-[#F7AB0A] py-2 px-4 text-base sm:py-5 sm:px-10 rounded-md text-black
+                            font-bold sm:text-lg'
                     >
                         {isSending ? (
                             <ThreeDots
